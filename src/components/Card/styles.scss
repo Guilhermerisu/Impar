@@ -1,0 +1,84 @@
+.card-container {
+  background: #ffffff;
+  width: 250px;
+  height: 280px;
+
+  box-shadow: 0px 3px 6px #e5e5e5;
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  .icon-background {
+    margin: 20px;
+    width: 110px;
+    height: 110px;
+
+    background: #f6f4f6;
+    overflow: hidden;
+    border-radius: 70px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-title-container {
+    border-top: 1px solid #f0eff0;
+    width: 90%;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin-bottom: -40px;
+
+      text-align: center;
+      color: #263238;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+  .card-button-container {
+    width: 100%;
+    height: 43px;
+
+    box-shadow: inset 0px 3px 6px #0000000f;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .card-button-wrapper {
+      display: flex;
+
+      cursor: pointer;
+
+      img {
+        width: 14px;
+        margin-right: 5px;
+      }
+
+      button {
+        border: none;
+        background: none;
+        margin-top: 3px;
+
+        color: #263238;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .card-delete:hover {
+        color: #db2525;
+      }
+      .card-edit:hover {
+        color: #e76316;
+      }
+    }
+  }
+}

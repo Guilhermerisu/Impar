@@ -1,0 +1,108 @@
+.delete-overlay {
+  background: #f6f4f6cc;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.delete-container {
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  animation: popIn 0.5s ease forwards;
+  z-index: 2;
+
+  @keyframes popIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .close-button {
+    border: none;
+    background: none;
+    position: relative;
+    bottom: 30px;
+    left: 170px;
+    cursor: pointer;
+  }
+  .delete-icon-background {
+    width: 120px;
+    height: 120px;
+    background: #db25250f;
+    border: 6px solid #e4e4e4;
+    border-radius: 90px;
+
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+
+    img {
+      width: 45px;
+    }
+  }
+  h1 {
+    color: #db2525;
+    font-size: 30px;
+  }
+
+  span {
+    color: #454545;
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 16px;
+  }
+
+  .delete-buttons {
+    border-top: 1px solid #e4e4e4;
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      border-radius: 8px;
+      width: 120px;
+      height: 40px;
+      margin-top: 25px;
+
+      font-weight: bold;
+      font-size: 15px;
+      box-shadow: 0px 3px 6px #92207242;
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+    .delete-button {
+      background: #db2525;
+      border: none;
+      color: #fff;
+    }
+    .cancel-button {
+      background: none;
+      border: 1px solid #db2525;
+      color: #db2525;
+    }
+  }
+}

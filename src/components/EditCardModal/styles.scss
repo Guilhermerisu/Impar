@@ -1,0 +1,130 @@
+.edit-overlay {
+  background: #f6f4f6cc;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.edit-container {
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  animation: popIn 0.5s ease forwards;
+  z-index: 2;
+
+  @keyframes popIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .edit-close-button {
+    border: none;
+    background: none;
+    position: relative;
+    bottom: 30px;
+    left: 170px;
+    height: 5px;
+    cursor: pointer;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: bold;
+      color: #454545;
+      font-size: 15px;
+      margin-top: 15px;
+    }
+
+    input {
+      height: 60px;
+      background: none;
+      border: 1px solid #b9b9b9;
+      border-radius: 8px;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      font-weight: 300;
+      color: #757575;
+      padding-left: 20px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        padding: 13px 10px;
+
+        border: 1px solid #e76316;
+        border-radius: 8px;
+        font-weight: bold;
+        color: #e76316;
+        cursor: pointer;
+        transition: 0.2s linear;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  }
+
+  .edit-buttons {
+    border-top: 1px solid #e4e4e4;
+    margin-top: 30px;
+    margin-bottom: -7px;
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      border-radius: 8px;
+      width: 120px;
+      height: 40px;
+      margin-top: 25px;
+
+      font-weight: bold;
+      font-size: 15px;
+      box-shadow: 0px 3px 6px #92207242;
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+    .edit-button {
+      background: #e76316;
+      border: none;
+      color: #fff;
+    }
+    .cancel-edit-button {
+      background: none;
+      border: 1px solid #db2525;
+      color: #db2525;
+    }
+  }
+}

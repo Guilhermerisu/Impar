@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+}
+body {
+  background: #f6f4f6;
+}
+
+section {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 50px;
+  max-width: 86%;
+  margin-top: -20px;
+  div {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-size: 32px;
+      color: #5f1478;
+    }
+  }
+}
+.cards-container {
+  padding: 0px 80px 0px 80px;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  gap: 25px;
+}

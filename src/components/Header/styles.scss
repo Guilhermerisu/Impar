@@ -1,0 +1,14 @@
+header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  box-shadow: 0px 3px 6px #00000029;
+  background: transparent linear-gradient(272deg, #ae276f 0%, #5f1478 100%) 0%;
+
+  img {
+    padding: 9px;
+  }
+}

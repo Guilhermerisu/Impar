@@ -1,0 +1,120 @@
+.overlay {
+  background: #f6f4f6cc;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+
+  .modal-container {
+    background: #ffffff;
+    width: 642px;
+    height: 100vh;
+    border-radius: 5px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+
+    position: relative;
+    animation: swipe 0.2s linear;
+    @keyframes swipe {
+      0% {
+        left: 100%;
+      }
+      100% {
+        left: 0;
+      }
+    }
+
+    .modal-header {
+      margin: 0px 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      height: 100px;
+      border-bottom: 1px solid #d4d4d4;
+
+      img {
+        width: 46px;
+        height: 46px;
+      }
+      span {
+        font-weight: bold;
+        font-size: 22px;
+        color: #5f1478;
+      }
+      button {
+        border: none;
+        background: none;
+        justify-self: flex-end;
+
+        cursor: pointer;
+        margin-left: 350px;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 32px;
+
+      label {
+        margin-top: 50px;
+        font-weight: bold;
+        color: #454545;
+      }
+
+      input,
+      .file-label {
+        height: 60px;
+        background: none;
+        border: 1px solid #b9b9b9;
+        border-radius: 8px;
+        margin-top: 15px;
+
+        font-size: 18px;
+        font-weight: 300;
+        color: #757575;
+        padding-left: 20px;
+      }
+
+      .file-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          margin-right: 7px;
+          padding: 13px 17px;
+          border: 1px solid #e76316;
+          border-radius: 8px;
+          font-weight: bold;
+          color: #e76316;
+          cursor: pointer;
+          transition: 0.2s linear;
+
+          &:hover {
+            filter: brightness(0.9);
+          }
+        }
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .submit-container {
+        display: flex;
+        justify-content: flex-end;
+        border-top: 1px solid #d4d4d4;
+        margin-top: 50px;
+
+        Button {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
