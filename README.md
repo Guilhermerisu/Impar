@@ -2,6 +2,8 @@
   <img src="https://github.com/Guilhermerisu/Impar/blob/main/src/assets/logo-teste.png" alt="Impar - Teste">
 </div>
 
+  <img src="https://github.com/Guilhermerisu/imagens/blob/main/PreviewGif1.gif" alt="Gif preview 1">
+  <img src="https://github.com/Guilhermerisu/imagens/blob/main/PreviewGif2.gif" alt="Gif preview 2">
 
 ## ✨ Tecnologias
 
