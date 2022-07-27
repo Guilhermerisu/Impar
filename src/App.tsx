@@ -29,7 +29,6 @@ function App() {
       </section>
 
       <div className="cards-container">
-        {/* @ts-ignore */}
         {dataCards?.map((result) => {
           return (
             <Card

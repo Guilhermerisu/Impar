@@ -10,7 +10,7 @@ import { getDownloadURL, uploadBytes, ref } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 
 export default function NewCardModal({ setIsNewCardModalOpen }) {
-  const [image, setImage] = useState();
+  const [image, setImage] = useState(File[0]);
   const [title, setTitle] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,11 +24,9 @@ export default function NewCardModal({ setIsNewCardModalOpen }) {
     const imageRef = ref(storage, `images/${Date.now()}`);
     uploadBytes(imageRef, image).then(() => {
       getDownloadURL(imageRef).then((url) => {
-        //@ts-ignore
         setDoc(doc(db, "cards", `${image?.name}`), {
           titulo: title,
           image: url,
-          //@ts-ignore
           id: image?.name,
           time: Date.now(),
         });
@@ -37,6 +35,7 @@ export default function NewCardModal({ setIsNewCardModalOpen }) {
       setIsLoading(false);
     });
   };
+  console.log(image);
 
   return (
     <div className="overlay">
@@ -61,14 +60,12 @@ export default function NewCardModal({ setIsNewCardModalOpen }) {
           <label htmlFor="image">INCLUA UMA IMAGEM PARA APARECER NO CARD</label>
 
           <label htmlFor="image" className="file-label">
-            {/* @ts-ignore */}
             {image == null ? "Nenhum arquivo selecionado" : image.name}
             <span className="label-button">Escolher arquivo</span>
           </label>
           <input
             type="file"
             id="image"
-            //@ts-ignore
             onChange={(image) => setImage(image.target.files[0])}
           />
           <div className="submit-container">

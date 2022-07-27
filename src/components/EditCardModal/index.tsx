@@ -13,7 +13,7 @@ export default function EditCardModal({
   id,
 }) {
   const [newTitle, setNewTitle] = useState("");
-  const [newImage, setNewImage] = useState();
+  const [newImage, setNewImage] = useState(File[0]);
   const [isLoading, setIsLoading] = useState(false);
 
   const updateCard = (e: FormEvent) => {
@@ -64,7 +64,6 @@ export default function EditCardModal({
             type="file"
             id="image"
             placeholder="Nenhum arquivo selecionado"
-            //@ts-ignore
             onChange={(image) => setNewImage(image.target.files[0])}
           />
           <div className="edit-buttons">
