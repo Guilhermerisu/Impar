@@ -8,12 +8,15 @@
 ## ✨ Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
-
-- [React](https://reactjs.org)
-- [Vite](Vitejs.dev/)
-- [SASS](https://sass-lang.com)
-- [Firebase](https://firebase.google.com)
-- [TypeScript](https://www.typescriptlang.org/)
+<div>
+12
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+​<img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"/>
+​<img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white"/>
+​<img src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white"/>
+​<img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
+</div>
+19
 
 ## 🔖 Deploy
 
